@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Patrick Raymond Andreas — Portfolio & CV</title>
+<meta name="description" content="Portfolio and CV of Patrick Raymond Andreas — Informatics graduate from Universitas Negeri Semarang. Mobile and web developer, computer vision.">
+<meta name="author" content="Patrick Raymond Andreas">
+<meta name="theme-color" content="#e8e8e5">
+
+<link rel="canonical" href="https://patrickrayy.github.io/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://patrickrayy.github.io/">
+<meta property="og:site_name" content="Patrick Raymond Andreas">
+<meta property="og:title" content="Patrick Raymond Andreas — Portfolio & CV">
+<meta property="og:description" content="Informatics graduate. Mobile and web developer, computer vision.">
+<meta property="og:image" content="https://patrickrayy.github.io/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Patrick Raymond Andreas — Portfolio & CV">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Patrick Raymond Andreas — Portfolio & CV">
+<meta name="twitter:description" content="Informatics graduate. Mobile and web developer, computer vision.">
+<meta name="twitter:image" content="https://patrickrayy.github.io/assets/og-image.png">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/chakra-petch-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/jetbrains-mono-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three.module.min.js",
+    "three/addons/": "./vendor/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+
+<script>
+/* Runs before anything paints: decide whether motion is on.
+   Saved choice wins; otherwise follow the operating system's Reduce Motion
+   setting. Kept inline (and inside <body>) so the single-file build in
+   pdf-source/build-artifact.js picks it up too. */
+(function () {
+  var m = null;
+  try { m = localStorage.getItem("pra-motion"); } catch (e) {}
+  if (m !== "on" && m !== "off") {
+    m = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "off" : "on";
+  }
+  document.documentElement.setAttribute("data-motion", m);
+})();
+</script>
+
+<div class="grid-backdrop" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<!-- ============================================================== HEADER -->
+<header class="header">
+  <div class="header__inner">
+    <a class="brand" href="#top" aria-label="Patrick Raymond Andreas — home">
+      <span class="brand__mark" id="brandMark">PRA</span>
+      <span class="brand__text">
+        <span class="brand__name" id="brandName">Patrick Raymond</span>
+        <span class="brand__role" data-i18n="meta.role">Informatics Graduate</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="#about"      data-i18n="ui.nav.about">About</a>
+      <a href="#work"       data-i18n="ui.nav.work">Work</a>
+      <a href="#experience" data-i18n="ui.nav.experience">Experience</a>
+      <a href="#skills"     data-i18n="ui.nav.skills">Skills</a>
+      <a href="#contact"    data-i18n="ui.nav.contact">Contact</a>
+    </nav>
+
+    <div class="header__actions">
+      <button class="lang" id="langToggle" type="button" aria-label="Switch language">
+        <span class="lang__dot"></span>
+        <span class="lang__long" id="langLabel">Bahasa Indonesia</span>
+        <span class="lang__short" id="langShort">ID</span>
+      </button>
+      <a class="btn-cta" id="cvTop" href="#" download>
+        <span data-i18n="ui.cta.cv">Download CV</span>
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <path d="M6 1v8M2.5 6.2 6 9.7l3.5-3.5M1.5 11h9" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"/>
+        </svg>
+      </a>
+      <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="drawer" id="drawer" aria-label="Mobile">
+  <a href="#about"      data-i18n="ui.nav.about">About</a>
+  <a href="#work"       data-i18n="ui.nav.work">Work</a>
+  <a href="#experience" data-i18n="ui.nav.experience">Experience</a>
+  <a href="#skills"     data-i18n="ui.nav.skills">Skills</a>
+  <a href="#contact"    data-i18n="ui.nav.contact">Contact</a>
+  <a class="btn-cta" id="cvDrawer" href="#" download><span data-i18n="ui.cta.cv">Download CV</span></a>
+</nav>
+
+<!-- ========================================================= SOCIAL RAIL -->
+<aside class="rail" id="rail" aria-label="Social links"></aside>
+
+<noscript><p class="noscript">This site uses JavaScript to render its content and 3D scene. Please enable JavaScript. / Situs ini memerlukan JavaScript.</p></noscript>
+
+<main class="shell" id="top">
+
+  <!-- ============================================================= HERO -->
+  <section class="hero">
+    <div class="hero__marquee" aria-hidden="true">
+      <div class="hero__track" id="heroTrack"></div>
+    </div>
+
+    <div class="hero__kicker">
+      <span class="mk"></span>
+      <span class="mono" data-i18n="hero.kicker">Informatics graduate — class of 2026</span>
+      <span class="mono dim" data-i18n="meta.location">South Tangerang, Banten</span>
+    </div>
+
+    <div class="hero__body">
+      <div class="hero__intro">
+        <p class="lede" data-i18n="hero.lead"></p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#work"><span data-i18n="ui.cta.portfolio">View Portfolio</span></a>
+          <a class="btn btn--ghost" id="pfBtn" href="#" download>
+            <span data-i18n="ui.cta.pdf">Portfolio PDF</span>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M6 1v8M2.5 6.2 6 9.7l3.5-3.5M1.5 11h9" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__stage">
+        <canvas id="scene" aria-label="Interactive 3D object" role="img"></canvas>
+        <div class="stage__frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="stage__hint">
+          <span class="mk mk--hollow"></span>
+          <span class="mono" data-i18n="ui.labels.scroll">Scroll</span>
+        </div>
+        <button class="stage__motion" id="motionToggle" type="button" aria-pressed="false">
+          <svg class="icon-play" width="10" height="11" viewBox="0 0 10 11" fill="currentColor" aria-hidden="true">
+            <path d="M0 0v11l10-5.5L0 0z"/>
+          </svg>
+          <svg class="icon-pause" width="10" height="11" viewBox="0 0 10 11" fill="currentColor" aria-hidden="true">
+            <path d="M0 0h3.4v11H0zM6.6 0H10v11H6.6z"/>
+          </svg>
+          <span id="motionLabel">Motion</span>
+        </button>
+      </div>
+
+      <div class="hero__stats" id="heroStats"></div>
+    </div>
+
+    <div class="ticker">
+      <div class="ticker__label"><span class="mono" data-i18n="ui.labels.stack">Working with</span></div>
+      <div class="ticker__viewport"><div class="ticker__track" id="tickerTrack"></div></div>
+    </div>
+  </section>
+
+  <!-- ============================================================ ABOUT -->
+  <section class="section" id="about">
+    <div class="section__head reveal">
+      <div>
+        <div class="section__meta">
+          <span class="section__index">01</span>
+          <span class="mk"></span>
+          <span class="section__kicker" data-i18n="ui.sections.about.kicker">About</span>
+        </div>
+        <h2 class="section-title" data-i18n="ui.sections.about.title" style="margin-top:14px"></h2>
+      </div>
+      <p class="lede" data-i18n="about.intro"></p>
+    </div>
+    <div class="about__grid reveal" id="aboutGrid"></div>
+  </section>
+
+  <!-- ============================================================= WORK -->
+  <section class="section" id="work">
+    <div class="section__head reveal">
+      <div>
+        <div class="section__meta">
+          <span class="section__index">02</span>
+          <span class="mk"></span>
+          <span class="section__kicker" data-i18n="ui.sections.work.kicker">Selected work</span>
+        </div>
+        <h2 class="section-title" data-i18n="ui.sections.work.title" style="margin-top:14px"></h2>
+      </div>
+      <p class="lede" data-i18n="ui.sections.work.note"></p>
+    </div>
+    <div class="projects reveal" id="projectList"></div>
+  </section>
+
+  <!-- ======================================================= EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="section__head reveal">
+      <div>
+        <div class="section__meta">
+          <span class="section__index">03</span>
+          <span class="mk"></span>
+          <span class="section__kicker" data-i18n="ui.sections.experience.kicker">Experience</span>
+        </div>
+        <h2 class="section-title" data-i18n="ui.sections.experience.title" style="margin-top:14px"></h2>
+      </div>
+    </div>
+    <div class="timeline reveal" id="timeline"></div>
+  </section>
+
+  <!-- =========================================================== SKILLS -->
+  <section class="section" id="skills">
+    <div class="section__head reveal">
+      <div>
+        <div class="section__meta">
+          <span class="section__index">04</span>
+          <span class="mk"></span>
+          <span class="section__kicker" data-i18n="ui.sections.skills.kicker">Skills &amp; education</span>
+        </div>
+        <h2 class="section-title" data-i18n="ui.sections.skills.title" style="margin-top:14px"></h2>
+      </div>
+    </div>
+    <div class="skills__wrap reveal">
+      <div class="skills__grid" id="skillsGrid"></div>
+      <div id="sidePanels"></div>
+    </div>
+  </section>
+
+  <!-- ========================================================== CONTACT -->
+  <section class="section" id="contact">
+    <div class="section__head reveal">
+      <div>
+        <div class="section__meta">
+          <span class="section__index">05</span>
+          <span class="mk"></span>
+          <span class="section__kicker" data-i18n="ui.sections.contact.kicker">Contact</span>
+        </div>
+        <h2 class="section-title" data-i18n="ui.sections.contact.title" style="margin-top:14px"></h2>
+      </div>
+      <p class="lede" data-i18n="contact.lead"></p>
+    </div>
+    <div class="contact__grid reveal">
+      <a class="contact__big" id="contactEmail" href="#"></a>
+      <div class="contact__list" id="contactList"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="footer__note" data-i18n="ui.footer.built"></p>
+    <div class="footer__bottom">
+      <span class="mono dim" id="footerName"></span>
+      <span class="mono dim" id="footerYear"></span>
+    </div>
+  </footer>
+</main>
+
+<script src="js/content.js"></script>
+<script src="js/main.js"></script>
+<script type="module" src="js/scene.js"></script>
+</body>
+</html>

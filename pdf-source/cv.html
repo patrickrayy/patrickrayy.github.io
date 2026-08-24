@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Patrick Raymond Andreas — CV</title>
+<link rel="stylesheet" href="print.css">
+<style>
+@page { size: A4; margin: 12mm 13mm; }
+
+/* ------------------------------------------------------------- masthead */
+.masthead {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 14px;
+  padding-bottom: 9px;
+  border-bottom: 2.4px solid var(--ink);
+}
+.masthead h1 { font-family:"Chakra Petch",sans-serif; font-weight:700; font-size:25pt; line-height:.98; text-transform:uppercase; letter-spacing:-.02em; }
+.masthead .role { font-family:"JetBrains Mono",monospace; font-size:7.4pt; letter-spacing:.13em; text-transform:uppercase; color:var(--accent); margin-top:5px; font-weight:500; }
+.masthead .mark { width:34px; height:34px; background:var(--accent); color:#fff; display:grid; place-items:center; font-family:"Chakra Petch",sans-serif; font-weight:700; font-size:9pt; border-radius:7px; }
+
+.contactbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  padding: 7px 0 0;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 7pt;
+  letter-spacing: .04em;
+  color: var(--ink-2);
+}
+.contactbar span::before { content: ""; display:inline-block; width:4px; height:4px; background:var(--accent); margin-right:6px; vertical-align:1.5px; }
+
+/* -------------------------------------------------------------- section */
+.sec { margin-top: 16px; break-inside: avoid; }
+.sec > h2 {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 6.8pt;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--accent);
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 8px;
+}
+
+.profile { font-size: 9.9pt; color: var(--ink-2); line-height: 1.5; }
+
+/* --------------------------------------------------------------- entries */
+.entry { display: grid; grid-template-columns: 122px 1fr; gap: 14px; padding: 7.5px 0; break-inside: avoid; }
+.entry + .entry { border-top: 1px solid var(--line-soft); }
+.entry__when { font-family:"JetBrains Mono",monospace; font-size:6.8pt; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); padding-top:2px; }
+.entry__title { font-family:"Chakra Petch",sans-serif; font-weight:700; font-size:11.6pt; text-transform:uppercase; line-height:1.1; }
+.entry__org { font-family:"JetBrains Mono",monospace; font-size:7.2pt; letter-spacing:.06em; color:var(--ink-2); margin:2px 0 4px; }
+.entry ul li { position:relative; padding-left:11px; font-size:9.4pt; color:var(--ink-2); margin-bottom:1.5px; }
+.entry ul li::before { content:""; position:absolute; left:0; top:5.5px; width:4px; height:4px; background:var(--accent); }
+
+/* -------------------------------------------------------------- projects */
+.proj { padding: 7.5px 0; break-inside: avoid; }
+.proj + .proj { border-top: 1px solid var(--line-soft); }
+.proj__head { display:flex; align-items:baseline; gap:8px; flex-wrap:wrap; }
+.proj__title { font-family:"Chakra Petch",sans-serif; font-weight:700; font-size:11pt; text-transform:uppercase; line-height:1.1; }
+.pill { font-family:"JetBrains Mono",monospace; font-size:6pt; letter-spacing:.1em; text-transform:uppercase; border:.8px solid var(--line); padding:1.5px 5px; color:var(--muted); }
+.pill--group { border-color:var(--accent); color:var(--accent); }
+.proj p { font-size:9.4pt; color:var(--ink-2); margin-top:3px; }
+
+/* ---------------------------------------------------------------- skills */
+.skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px 20px; }
+.skills div { display:grid; grid-template-columns: 88px 1fr; gap:9px; align-items:baseline; padding:4.5px 0; border-top:1px solid var(--line-soft); }
+.skills div:nth-child(-n+2) { border-top:0; }
+.skills dt, .skills .k { font-family:"JetBrains Mono",monospace; font-size:6.4pt; letter-spacing:.11em; text-transform:uppercase; color:var(--accent); font-weight:600; }
+.skills .v { font-size:9.3pt; color:var(--ink-2); }
+
+/* ---------------------------------------------------------------- footer */
+.foot { margin-top: 14px; padding-top: 7px; border-top: 1px solid var(--line); display:flex; justify-content:space-between; gap:14px; font-family:"JetBrains Mono",monospace; font-size:6.4pt; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div>
+    <h1>Patrick Raymond Andreas</h1>
+    <div class="role">Informatics Graduate · Mobile &amp; Web Developer</div>
+  </div>
+  <div class="mark">PRA</div>
+</header>
+
+<div class="contactbar">
+  <span>patrickraymond737@gmail.com</span>
+  <span>+62 822-1016-2910</span>
+  <span>South Tangerang, Banten, Indonesia</span>
+  <span>github.com/patrickrayy</span>
+  <span>linkedin.com/in/patrick-raymond-1a370a277</span>
+  <!-- Ganti kalau URL GitHub Pages Anda berbeda -->
+  <span>patrickrayy.github.io</span>
+</div>
+
+<section class="sec">
+  <h2>Profile</h2>
+  <p class="profile">
+    Informatics Engineering graduate from Universitas Negeri Semarang (GPA 3.79). I build mobile and web
+    products — most recently a React Native field-operations app for an LPG distributor — and I train
+    computer-vision models to classify medical images. I work comfortably across disciplines: alongside
+    engineering I have produced video and social content for two campus organisations and taught digital
+    safety to children in a rural village. I am applying to Apple Developer Academy Indonesia because a
+    nine-month, build-first programme is the format I learn fastest in.
+  </p>
+</section>
+
+<section class="sec">
+  <h2>Education</h2>
+  <div class="entry">
+    <div class="entry__when">Aug 2022 — Jul 2026</div>
+    <div>
+      <div class="entry__title">Bachelor of Computer Science, Informatics Engineering</div>
+      <div class="entry__org">Universitas Negeri Semarang · GPA 3.79 / 4.00</div>
+      <ul>
+        <li>Thesis: Pneumonia classification from chest X-ray images using DenseNet-121 and ResNet-50 with a Convolutional Block Attention Module (CBAM).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <h2>Experience</h2>
+
+  <div class="entry">
+    <div class="entry__when">Oct — Nov 2025</div>
+    <div>
+      <div class="entry__title">Media Team</div>
+      <div class="entry__org">KKN Giat 13 UNNES — Desa Bogem (community service programme)</div>
+      <ul>
+        <li>Directed and edited the village profile video for Desa Bogem, from concept to final cut.</li>
+        <li>Designed the programme's Instagram content and kept a consistent feed identity.</li>
+        <li>Documented every activity across the two-month deployment.</li>
+        <li>Wrote and delivered a cyberbullying-awareness class for the village's children.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="entry__when">Jan — May 2025</div>
+    <div>
+      <div class="entry__title">Mobile Developer — Project-based Internship</div>
+      <div class="entry__org">PT Ngupoyo Rejeki Lestari Mulya</div>
+      <ul>
+        <li>Designed and built a mobile app with the team for driver attendance and live tracking of LPG delivery drivers.</li>
+        <li>Owned the front end: screen architecture, attendance and tracking interfaces, and state handling.</li>
+        <li>Contributed on the backend, wiring the API endpoints the app relied on.</li>
+        <li>Stack: React Native, Expo, TypeScript, Node.js, Tailwind CSS.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="entry__when">Sep — Dec 2024</div>
+    <div>
+      <div class="entry__title">Web Development &amp; UI/UX Trainee</div>
+      <div class="entry__org">Celerates Academy — PT Mitra Talenta Group (Kampus Merdeka)</div>
+      <ul>
+        <li>Trained as a full-stack web developer across HTML, CSS, JavaScript and Express.js / Node.js.</li>
+        <li>Named <strong>The Most Active Student</strong> of the cohort.</li>
+        <li>Built a team capstone: a Bali travel web app with itinerary building, hotel booking, accommodation and transport.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="entry__when">Jul — Sep 2023</div>
+    <div>
+      <div class="entry__title">Media &amp; Communications (Kominfo) — Volunteer</div>
+      <div class="entry__org">Interface 2023, Computer Science Department</div>
+      <ul>
+        <li>Produced trailer videos for Interface 2023 and PKMMTJ 2023.</li>
+        <li>Designed the Instagram feed and managed the @osjurilkom account.</li>
+        <li>Handled photo and video documentation throughout both events.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <h2>Selected Projects</h2>
+
+  <div class="proj">
+    <div class="proj__head">
+      <span class="proj__title">Pneumonia Classification — DenseNet-121, ResNet-50 &amp; CBAM</span>
+      <span class="pill">Individual</span>
+      <span class="pill">Thesis</span>
+    </div>
+    <p>Deep-learning study detecting pneumonia from chest X-rays, comparing two CNN backbones with an attention module to sharpen where the model looks. Python, TensorFlow / Keras.</p>
+  </div>
+
+  <div class="proj">
+    <div class="proj__head">
+      <span class="proj__title">Field Operations App for an LPG Distributor</span>
+      <span class="pill pill--group">Group project</span>
+      <span class="pill">Internship</span>
+    </div>
+    <p>Mobile app for driver attendance and live delivery-driver tracking. My role: front-end lead, with backend contributions. React Native, Expo, TypeScript, Node.js.</p>
+  </div>
+
+  <div class="proj">
+    <div class="proj__head">
+      <span class="proj__title">Bali Trip Planner — Travel Web App</span>
+      <span class="pill pill--group">Group project</span>
+      <span class="pill">Course capstone</span>
+    </div>
+    <p>Travel-planning web app for Bali: day-by-day itinerary building, hotel booking, accommodation and transport in one flow. HTML, CSS, JavaScript, Express.js.</p>
+  </div>
+
+  <div class="proj">
+    <div class="proj__head">
+      <span class="proj__title">Interface 2023 — Event Campaign &amp; Trailer</span>
+      <span class="pill pill--group">Group project</span>
+      <span class="pill">Committee</span>
+    </div>
+    <p>Trailer videos, Instagram feed identity and full documentation for two Computer Science department events.</p>
+  </div>
+
+  <div class="proj">
+    <div class="proj__head">
+      <span class="proj__title">Desa Bogem — Village Profile &amp; Digital Safety Class</span>
+      <span class="pill pill--group">Group project</span>
+      <span class="pill">Community service</span>
+    </div>
+    <p>Village profile video plus a cyberbullying-awareness class written and taught to local children during KKN Giat 13 UNNES.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div><span class="k">Languages</span><span class="v">JavaScript, TypeScript, Python, Java, C++, SQL</span></div>
+    <div><span class="k">Mobile</span><span class="v">React Native, Expo, Flutter</span></div>
+    <div><span class="k">Web</span><span class="v">HTML, CSS, Tailwind CSS, Node.js, Express.js, REST API</span></div>
+    <div><span class="k">Data &amp; AI</span><span class="v">Jupyter Notebook, CNNs, DenseNet-121, ResNet-50, CBAM</span></div>
+    <div><span class="k">Tools</span><span class="v">Figma, VS Code, Git, video editing</span></div>
+    <div><span class="k">Spoken</span><span class="v">Indonesian (native), English (intermediate, TOEFL 547)</span></div>
+  </div>
+</section>
+
+<section class="sec">
+  <h2>Awards</h2>
+  <div class="entry">
+    <div class="entry__when">2024</div>
+    <div>
+      <div class="entry__title">The Most Active Student</div>
+      <div class="entry__org">Celerates Academy — Web Development &amp; UI/UX, Kampus Merdeka</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <h2>Online Portfolio</h2>
+  <div class="entry">
+    <div class="entry__when">Web</div>
+    <div>
+      <div class="entry__title">patrickrayy.github.io</div>
+      <div class="entry__org">Interactive portfolio — built from scratch with HTML, CSS, JavaScript and Three.js</div>
+      <ul>
+        <li>Full write-ups of all five projects, in English and Indonesian, with images and links.</li>
+        <li>A downloadable copy of this CV and of the portfolio PDF.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="foot">
+  <span>Patrick Raymond Andreas — Curriculum Vitae</span>
+  <span>Apple Developer Academy Indonesia</span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+/* Portfolio PDF — one A4 page per project, plus a cover. */
+
+@page { size: A4; margin: 0; }
+
+.page {
+  width: 210mm;
+  height: 296.6mm;
+  padding: 15mm 14mm 12mm;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.mark {
+  width: 30px; height: 30px;
+  background: var(--accent);
+  color: #fff;
+  display: grid; place-items: center;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700; font-size: 8.4pt;
+  border-radius: 6px;
+}
+
+/* =================================================================== COVER */
+.cover { position: relative; }
+.cover::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6mm;
+  background: var(--accent);
+}
+.cover__top {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding-top: 4mm;
+  padding-bottom: 10mm;
+}
+.cover__top .mono { color: var(--muted); }
+
+.cover__mid { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.cover__word {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  font-size: 62pt;
+  line-height: .88;
+  text-transform: uppercase;
+  letter-spacing: -.035em;
+}
+.cover__rule { width: 46mm; height: 3.4px; background: var(--accent); margin: 7mm 0 6mm; }
+.cover__name {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  font-size: 21pt;
+  line-height: 1.04;
+  text-transform: uppercase;
+  letter-spacing: -.015em;
+}
+.cover__role { color: var(--accent); margin-top: 4px; font-size: 7.2pt; }
+.cover__lead { margin-top: 7mm; max-width: 118mm; font-size: 10pt; line-height: 1.55; color: var(--ink-2); }
+
+.cover__toc { margin-top: 10mm; }
+.cover__toc > .mono { display: block; margin-bottom: 5px; }
+.toc { border-top: 1px solid var(--line); }
+.toc li {
+  display: grid;
+  grid-template-columns: 12mm 1fr auto;
+  gap: 8px;
+  align-items: baseline;
+  padding: 5.5px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.toc__n { font-family:"JetBrains Mono",monospace; font-size:6.8pt; color: var(--accent); letter-spacing:.1em; }
+.toc__t { font-family:"Chakra Petch",sans-serif; font-weight:700; font-size:10pt; text-transform:uppercase; line-height:1.12; }
+.toc__m { font-family:"JetBrains Mono",monospace; font-size:6.2pt; letter-spacing:.09em; text-transform:uppercase; color: var(--muted); white-space: nowrap; }
+
+.cover__foot {
+  margin-top: auto;
+  padding-top: 6mm;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+}
+.cover__foot .mono { color: var(--ink-2); font-size: 6.4pt; }
+
+/* ============================================================ PROJECT PAGE */
+.proj__top {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10mm;
+  align-items: start;
+  padding-bottom: 5mm;
+  border-bottom: 2.2px solid var(--ink);
+}
+.proj__num {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  font-size: 34pt;
+  line-height: .8;
+  color: var(--accent);
+  letter-spacing: -.04em;
+}
+.proj__title {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  font-size: 18pt;
+  line-height: 1.02;
+  text-transform: uppercase;
+  letter-spacing: -.02em;
+}
+.proj__tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px; }
+
+.pill {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 6pt;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  border: .9px solid var(--line);
+  padding: 2px 6px;
+  color: var(--muted);
+}
+.pill--group { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.pill--solo  { border-color: var(--ink); color: var(--ink); font-weight: 600; }
+
+.proj__summary {
+  font-size: 11.8pt;
+  line-height: 1.45;
+  color: var(--ink);
+  padding: 6mm 0;
+  border-bottom: 1px solid var(--line);
+  max-width: 165mm;
+}
+
+.proj__body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.28fr 1fr;
+  gap: 9mm;
+  padding-top: 5mm;
+  min-height: 0;
+}
+.col { display: flex; flex-direction: column; }
+
+.f { padding: 3.2mm 0; border-bottom: 1px solid var(--line-soft); }
+.f:last-child { border-bottom: 0; }
+.f__k {
+  display: block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 6.4pt;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 3px;
+}
+.f p { font-size: 9.7pt; line-height: 1.5; color: var(--ink-2); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chip {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 6.2pt;
+  letter-spacing: .05em;
+  padding: 2.5px 6px;
+  background: var(--tint);
+  border: .8px solid var(--line-soft);
+  color: var(--ink-2);
+}
+
+.shots { display: grid; gap: 5px; grid-auto-rows: 1fr; height: 100%; }
+.shots img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--line); }
+.shots figcaption { font-family:"JetBrains Mono",monospace; font-size:5.8pt; color: var(--muted); margin-top: 2px; }
+.f--grow { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+.f--grow .shots { flex: 1; }
+/* when real images are supplied they stretch to fill the column instead of
+   holding a fixed 4:3 box */
+.f--grow .shots figure { display: flex; flex-direction: column; min-height: 0; }
+.f--grow .shots img { flex: 1; height: 100%; aspect-ratio: auto; min-height: 0; }
+
+.slot {
+  border: 1px dashed #bdbdb6;
+  /* flat fill on purpose — a repeating-gradient here gets rasterised by the
+     PDF renderer and blows the file up from ~120 KB to several megabytes */
+  background: #f6f6f3;
+  min-height: 26mm;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 3px;
+  text-align: center;
+  padding: 6px;
+}
+.slot .mono { font-size: 6pt; color: var(--ink-2); }
+.slot--thin { min-height: 0; padding: 7px; }
+
+.links { display: grid; gap: 3px; }
+.links li {
+  display: grid;
+  gap: 1px;
+  padding: 4px 6px;
+  border: 1px solid var(--line);
+}
+.links .mono { font-size: 6pt; color: var(--accent); }
+.links .url { font-family: "JetBrains Mono", monospace; font-size: 6.2pt; color: var(--ink-2); word-break: break-all; }
+
+.pfoot {
+  margin-top: auto;
+  padding-top: 4mm;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.pfoot .mono { font-size: 6pt; color: var(--muted); }
