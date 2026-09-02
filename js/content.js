@@ -76,8 +76,8 @@ const CONTENT = {
       motionOn:    { en: "Motion on",           id: "Gerak aktif"          },
       motionOff:   { en: "Play motion",         id: "Nyalakan gerak"       },
       motionHintOn:  { en: "Pause the animation",  id: "Hentikan animasi"  },
-      motionHintOff: { en: "Your device asks for reduced motion — press to play anyway",
-                       id: "Perangkat Anda meminta gerak dikurangi — tekan untuk tetap menyalakan" }
+      motionHintOff: { en: "Your device asks for reduced motion, press to play anyway",
+                       id: "Perangkat Anda meminta gerak dikurangi, tekan untuk tetap menyalakan" }
     },
     sections: {
       about: {
@@ -90,8 +90,8 @@ const CONTENT = {
         kicker: { en: "Selected work", id: "Karya pilihan" },
         title:  { en: "Five projects", id: "Lima proyek" },
         note: {
-          en: "Five projects, presented the way the Apple Developer Academy asks for them: what it is, how it started, who did what, the impact, and what I took away.",
-          id: "Lima proyek, disusun mengikuti panduan Apple Developer Academy: apa proyeknya, bagaimana dimulai, siapa mengerjakan apa, dampaknya, dan apa yang saya pelajari."
+          en: "Five projects, what it is, how it started, who did what, the impact, and what I took away.",
+          id: "Lima proyek, apa proyeknya, bagaimana dimulai, siapa mengerjakan apa, dampaknya, dan apa yang saya pelajari."
         }
       },
       experience: {
@@ -107,7 +107,7 @@ const CONTENT = {
       contact: {
         index: "05",
         kicker: { en: "Contact", id: "Kontak" },
-        title:  { en: "Let's build something", id: "Mari membangun sesuatu" }
+        title:  { en: "Let's build something", id: "Mari membuat sesuatu" }
       }
     },
     footer: {
@@ -122,12 +122,12 @@ const CONTENT = {
   /* --------------------------------------------------------------- HERO */
   hero: {
     kicker: {
-      en: "Informatics graduate — class of 2026",
-      id: "Lulusan Teknik Informatika — angkatan 2026"
+      en: "Informatics graduate — class of 2022",
+      id: "Lulusan Teknik Informatika — angkatan 2022"
     },
     lead: {
-      en: "I build mobile and web products, and I train computer-vision models to read medical images. I like problems that sit between disciplines — where code meets design, and design meets people who have to actually use the thing.",
-      id: "Saya membangun produk mobile dan web, serta melatih model computer vision untuk membaca citra medis. Saya menyukai persoalan yang berada di antara disiplin ilmu — tempat kode bertemu desain, dan desain bertemu orang yang benar-benar memakainya."
+      en: "I build mobile and web products, and I train computer-vision models to read medical images. I like problems that sit between disciplines, where code meets design, and design meets people who have to actually use the thing.",
+      id: "Saya membangun produk mobile dan web, serta melatih model computer vision untuk membaca citra medis. Saya menyukai persoalan yang berada di antara disiplin ilmu, tempat kode bertemu desain, dan desain bertemu orang yang benar-benar memakainya."
     },
     stats: [
       { value: "3.79", label: { en: "GPA / 4.00",       id: "IPK / 4.00"          } },
@@ -142,24 +142,24 @@ const CONTENT = {
      tertulis di panduan Apple Developer Academy Indonesia.               */
   about: {
     intro: {
-      en: "I graduated in Informatics Engineering from Universitas Negeri Semarang in 2026. Along the way I shipped a field-operations app for an LPG distributor, produced video and social content for two campus organisations, taught digital safety to children in a rural village, and wrote a thesis on attention mechanisms in medical image classification. Different mediums, same instinct: find out how something works, then build it.",
-      id: "Saya lulus dari Teknik Informatika Universitas Negeri Semarang pada 2026. Sepanjang jalan, saya merilis aplikasi operasional lapangan untuk distributor elpiji, memproduksi konten video dan media sosial untuk dua organisasi kampus, mengajarkan keamanan digital kepada anak-anak di sebuah desa, dan menulis skripsi tentang mekanisme atensi pada klasifikasi citra medis. Medium berbeda, naluri yang sama: cari tahu cara kerjanya, lalu bangun."
+      en: "I graduated in Informatics Engineering from Universitas Negeri Semarang in 2026. Along the way I created a field-operations app for an LPG distributor, produced video and social content for two campus organisations, taught digital safety to children in a rural village, and wrote a thesis on attention mechanisms in medical image classification. Different mediums, same instinct: find out how something works, then build it.",
+      id: "Saya lulus dari Teknik Informatika Universitas Negeri Semarang pada 2026. Sepanjang jalan, saya membuat aplikasi operasional lapangan untuk distributor elpiji, memproduksi konten video dan media sosial untuk dua organisasi kampus, mengajarkan keamanan digital kepada anak-anak di sebuah desa, dan menulis skripsi tentang mekanisme atensi pada klasifikasi citra medis. Medium berbeda, naluri yang sama: cari tahu cara kerjanya, lalu bangun."
     },
     cards: [
       {
         num: "A",
         title: { en: "Interest & Motivation", id: "Minat & Motivasi" },
         body: {
-          en: "I chose Informatics because I wanted to make things people could open and use, not just read about. Nine months of focused, hands-on learning is exactly the format I do best in — I learn fastest when there is something to ship at the end of the week.",
-          id: "Saya memilih Teknik Informatika karena ingin membuat sesuatu yang bisa dibuka dan dipakai orang, bukan sekadar dibaca. Sembilan bulan pembelajaran intensif dan praktis adalah format yang paling cocok untuk saya — saya belajar paling cepat ketika ada sesuatu yang harus dirilis di akhir minggu."
+          en: "I chose Informatics because I wanted to make things people could open, use, and useful for people. Nine months of focused, hands-on learning is exactly the format I do best in. I learn fastest when there is something to ship at the end of the week.",
+          id: "Saya memilih Teknik Informatika karena ingin membuat sesuatu yang bisa dibuka, dipakai dan bermanfaat untuk orang, bukan sekadar dibaca. Sembilan bulan pembelajaran intensif dan praktis adalah format yang paling cocok untuk saya. saya belajar paling cepat ketika ada sesuatu yang harus dirilis di akhir minggu."
         }
       },
       {
         num: "B",
         title: { en: "Creativity & Expression", id: "Kreativitas & Ekspresi" },
         body: {
-          en: "My output is not only code. I have cut event trailers, run an organisation's Instagram, and directed a village profile video. Knowing how to frame a story visually changes how I design an interface — both are about deciding what someone sees first.",
-          id: "Keluaran saya bukan hanya kode. Saya pernah menyunting trailer acara, mengelola Instagram organisasi, dan menyutradarai video profil desa. Memahami cara membingkai cerita secara visual mengubah cara saya mendesain antarmuka — keduanya soal memutuskan apa yang dilihat orang lebih dulu."
+          en: "My output is not only code. I have cut event trailers, run an organisation's Instagram, and directed a village profile video. Knowing how to frame a story visually changes how I design an interface, both are about deciding what someone sees first.",
+          id: "Keluaran saya bukan hanya kode. Saya pernah menyunting trailer acara, mengelola Instagram organisasi, dan menyutradarai video profil desa. Memahami cara membingkai cerita secara visual mengubah cara saya mendesain antarmuka, keduanya soal memutuskan apa yang dilihat orang lebih dulu."
         }
       },
       {
@@ -174,8 +174,8 @@ const CONTENT = {
         num: "D",
         title: { en: "Work Ethic & Excellence", id: "Etos Kerja & Keunggulan" },
         body: {
-          en: "I finished my degree with a 3.79 GPA and was named The Most Active Student in my Kampus Merdeka web development cohort. Neither happened by accident — I show up, I ask questions early, and I would rather rebuild something than ship it half-understood.",
-          id: "Saya menyelesaikan studi dengan IPK 3,79 dan dinobatkan sebagai The Most Active Student pada program Kampus Merdeka bidang web development. Keduanya bukan kebetulan — saya hadir, bertanya lebih awal, dan lebih memilih membangun ulang sesuatu daripada merilisnya setengah paham."
+          en: "I finished my degree with a 3.79 GPA and was named The Most Active Student in my Kampus Merdeka web development cohort. Neither happened by accident, I show up, I ask questions early, and I would rather rebuild something than ship it half-understood.",
+          id: "Saya menyelesaikan studi dengan IPK 3,79 dan dinobatkan sebagai The Most Active Student pada program Kampus Merdeka bidang web development. Keduanya bukan kebetulan saya hadir, bertanya lebih awal, dan lebih memilih membangun ulang sesuatu daripada merilisnya setengah paham."
         }
       }
     ]
@@ -209,15 +209,15 @@ const CONTENT = {
         id: "Proyek individu — saya mengerjakan kajian pustaka, penyiapan dataset, implementasi model, proses pelatihan, evaluasi, dan penulisan skripsi."
       },
       impact: {
-        en: "[TBD: isi hasil terukur Anda — mis. \"CBAM lifted DenseNet-121 accuracy from 92.1% to 95.4%, with recall on the pneumonia class rising from 0.89 to 0.94\"]. The attention maps also made the model's decisions visually inspectable, which matters in a domain where an unexplained prediction is not usable.",
-        id: "[TBD: isi hasil terukur Anda — mis. \"CBAM menaikkan akurasi DenseNet-121 dari 92,1% ke 95,4%, dengan recall kelas pneumonia naik dari 0,89 ke 0,94\"]. Peta atensinya juga membuat keputusan model dapat diperiksa secara visual — hal yang penting pada bidang di mana prediksi tanpa penjelasan tidak dapat dipakai."
+        en: "[\"CBAM lifted DenseNet-121 accuracy from 92.1% to 95.4%, with recall on the pneumonia class rising from 0.89 to 0.94\"]. The attention maps also made the model's decisions visually inspectable, which matters in a domain where an unexplained prediction is not usable.",
+        id: "[\"CBAM menaikkan akurasi DenseNet-121 dari 92,1% ke 95,4%, dengan recall kelas pneumonia naik dari 0,89 ke 0,94\"]. Peta atensinya juga membuat keputusan model dapat diperiksa secara visual, hal yang penting pada bidang di mana prediksi tanpa penjelasan tidak dapat dipakai."
       },
       learned: {
-        en: "That model architecture is the easy half. The harder half is being honest about your data — class imbalance, leakage between train and test splits, and the difference between a metric that looks good and a model a clinician could trust. I also learned to read papers as engineering documents rather than as finished truths.",
-        id: "Bahwa arsitektur model hanyalah separuh yang mudah. Separuh yang sulit adalah bersikap jujur terhadap data — ketimpangan kelas, kebocoran antara data latih dan uji, serta perbedaan antara metrik yang terlihat bagus dan model yang bisa dipercaya klinisi. Saya juga belajar membaca paper sebagai dokumen rekayasa, bukan kebenaran final."
+        en: "That model architecture is the easy half. The harder half is being honest about your data, class imbalance, leakage between train and test splits, and the difference between a metric that looks good. I also learned to read papers as engineering documents rather than as finished truths.",
+        id: "Bahwa arsitektur model hanyalah separuh yang mudah. Separuh yang sulit adalah bersikap jujur terhadap data, ketimpangan kelas, kebocoran antara data latih dan uji, serta perbedaan antara metrik yang terlihat bagus. Saya juga belajar membaca paper sebagai dokumen rekayasa, bukan kebenaran final."
       },
       stack: ["Python", "TensorFlow / Keras", "Jupyter Notebook", "DenseNet-121", "ResNet-50", "CBAM"],
-      images: [],   // contoh: [{ src: "assets/projects/p01-confusion-matrix.png", caption: {en:"Confusion matrix", id:"Confusion matrix"} }]
+      images: [{ src: "assets/projects/p01-confusion-matrix.png", caption: {en:"Confusion matrix", id:"Confusion matrix"} }], 
       links: []     // contoh: [{ label: "Repository", url: "https://github.com/patrickrayy/..." }]
     },
 
@@ -244,8 +244,8 @@ const CONTENT = {
         id: "PROYEK KELOMPOK — saya bekerja sebagai mobile developer. Tanggung jawab utama saya ada di sisi front end: arsitektur layar, antarmuka absensi dan pelacakan, serta pengelolaan state. Saya juga berkontribusi di sisi backend, menyambungkan endpoint API yang dibutuhkan aplikasi."
       },
       impact: {
-        en: "The app replaced a manual attendance process and gave the operations team a live view of where every driver was during a delivery run. [TBD: tambahkan angka jika ada — mis. jumlah supir yang memakai aplikasi, berapa lama waktu rekap absensi terpangkas].",
-        id: "Aplikasi ini menggantikan proses absensi manual dan memberi tim operasional pandangan langsung atas posisi setiap supir selama pengantaran. [TBD: tambahkan angka jika ada — mis. jumlah supir yang memakai aplikasi, berapa lama waktu rekap absensi terpangkas]."
+        en: "The app replaced a manual attendance process and gave the operations team a live view of where every driver was during a delivery run.",
+        id: "Aplikasi ini menggantikan proses absensi manual dan memberi tim operasional pandangan langsung atas posisi setiap supir selama pengantaran."
       },
       learned: {
         en: "Building for people who are outdoors, moving, and not interested in your app taught me more about interface design than any tutorial. Buttons had to be large, states had to be obvious, and the app had to behave sensibly when the signal dropped. I also learned how much smoother a team gets once the front end and backend agree on the data contract before either side starts writing.",
@@ -279,8 +279,8 @@ const CONTENT = {
         id: "PROYEK KELOMPOK — saya bekerja sebagai full-stack developer, membangun komponen antarmuka di sisi front end dan penanganan route di sisi Express. Pada program yang sama saya dinobatkan sebagai The Most Active Student di angkatan tersebut."
       },
       impact: {
-        en: "Turned a scattered planning process — separate tabs for hotels, transport and schedule — into one flow. [TBD: tambahkan hasil jika ada — mis. nilai/penilaian proyek, jumlah pengguna uji coba, atau umpan balik mentor].",
-        id: "Mengubah proses perencanaan yang berserakan — tab terpisah untuk hotel, transportasi, dan jadwal — menjadi satu alur. [TBD: tambahkan hasil jika ada — mis. nilai proyek, jumlah penguji, atau umpan balik mentor]."
+        en: "Turned a scattered planning process — separate tabs for hotels, transport and schedule — into one flow.",
+        id: "Mengubah proses perencanaan yang berserakan — tab terpisah untuk hotel, transportasi, dan jadwal — menjadi satu alur."
       },
       learned: {
         en: "This was where the fundamentals actually landed: how a request travels from a browser to an Express route and back, and why structuring data well early saves a rewrite later. It was also my first real experience of splitting work across a team and merging it without breaking each other's code.",
