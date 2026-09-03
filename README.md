@@ -14,15 +14,15 @@ css/style.css                  desain & layout
 css/fonts.css                  @font-face (font di-host sendiri, bukan CDN)
 js/content.js       <-- SEMUA TEKS ADA DI SINI (EN + ID)
 js/main.js                     render, pergantian bahasa, interaksi
-js/scene.js                    objek 3D (Three.js)
-vendor/                        Three.js r160 (disalin lokal, tanpa CDN)
+js/hero-photo.js                animasi foto di panggung hero
+assets/portrait.png             foto profil (latar sudah dihapus)
 assets/fonts/                  Chakra Petch · JetBrains Mono · Inter (subset latin)
 assets/PatrickRaymondAndreas_CV_Academy.pdf
 assets/PatrickRaymondAndreas_Portfolio_Academy.pdf
 pdf-source/                    sumber kedua PDF + script pembuatnya
 ```
 
-Situs ini **tidak memanggil satu pun server luar** — font, Three.js, dan semua
+Situs ini **tidak memanggil satu pun server luar** — font dan semua
 aset ada di dalam repo. Jadi tidak ada yang rusak kalau CDN mati.
 
 ---
@@ -143,20 +143,21 @@ susunannya harus dijaga ketat agar tetap muat 2 halaman. Setelah mengedit,
 - **Bahasa** — pilihan EN/ID disimpan di `localStorage`, jadi bertahan saat
   pengunjung kembali. Konten proyek ditulis dalam bahasa Inggris lebih dulu
   karena panduan Academy memintanya demikian.
-- **Objek 3D** — Three.js r160, digambar secara prosedural (tidak ada file model
-  yang perlu diunduh). Otomatis berhenti saat tab tidak terlihat, memakai
-  pixel ratio lebih rendah di layar kecil, dan menyembunyikan diri dengan rapi
-  bila WebGL tidak tersedia — halaman tetap terbaca penuh.
-- **Saklar gerak** — tombol di pojok kanan bawah panggung 3D. Kalau perangkat
+- **Foto hero** — `assets/portrait.png` (latar sudah dihapus), diberi efek
+  duotone lewat CSS `filter` dan dianimasikan oleh `js/hero-photo.js`
+  (miring mengikuti pointer, melayang pelan, mengecil sedikit saat digulir).
+  Otomatis berhenti saat tab tidak terlihat atau panggung keluar layar.
+- **Saklar gerak** — tombol di pojok kanan bawah panggung hero. Kalau perangkat
   pengunjung mengaktifkan *Reduce Motion* (Pengaturan → Aksesibilitas), situs
   dimulai dalam keadaan **diam** dan tombolnya menyala oranye bertuliskan
   "PLAY MOTION"; sekali ditekan, semuanya hidup. Pilihan itu disimpan di
   `localStorage`, jadi bertahan saat halaman dibuka lagi. Statusnya ada di
-  atribut `data-motion` pada `<html>` — semua CSS animasi dan loop 3D
-  mengikutinya, bukan mengikuti media query secara langsung.
+  atribut `data-motion` pada `<html>` — semua CSS animasi mengikutinya, bukan
+  mengikuti media query secara langsung.
 - **Aksesibilitas** — navigasi keyboard, `aria-expanded` pada akordeon proyek,
-  fokus terlihat, dan seluruh isi tetap terbaca tanpa 3D.
-- **Ukuran** — sekitar 900 KB total, mayoritas dari Three.js.
+  fokus terlihat, dan seluruh isi tetap terbaca tanpa animasi.
+- **Ukuran** — jauh lebih ringan sejak Three.js dihapus; sekarang mayoritas
+  ukuran berasal dari font yang di-host sendiri.
 
 ---
 

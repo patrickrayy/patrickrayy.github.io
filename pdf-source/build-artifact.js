@@ -1,10 +1,9 @@
 /* ==========================================================================
    build-artifact.js — bundles the whole site into ONE self-contained .html
    --------------------------------------------------------------------------
-   Fonts become data: URIs, Three.js is inlined as the UMD build, and the
-   ES-module scene is rewritten to use the global THREE. Handy for a preview
-   link or for opening the site straight off a USB stick — the GitHub Pages
-   version stays the multi-file one.
+   Fonts and the hero portrait become data: URIs. Handy for a preview link or
+   for opening the site straight off a USB stick — the GitHub Pages version
+   stays the multi-file one.
 
      node pdf-source/build-artifact.js
    ========================================================================== */
@@ -22,24 +21,9 @@ css = css.replace(/url\("\.\.\/assets\/fonts\/([^"]+)"\)/g, (_, file) => {
   return `url("data:font/woff2;base64,${b64}")`;
 });
 
-/* ------------------------------------------------------- Three.js (UMD) */
-const threeUMD = fs.readFileSync(
-  path.join(ROOT, "..", "node_modules", "three", "build", "three.min.js"), "utf8"
-);
-
-/* ------------------------- RoomEnvironment: ES module -> global THREE */
-let room = read("vendor", "jsm", "environments", "RoomEnvironment.js");
-const importBlock = room.match(/import\s*\{[\s\S]*?\}\s*from\s*'three';/);
-const named = importBlock[0].match(/\{([\s\S]*?)\}/)[1]
-  .split(",").map(s => s.trim()).filter(Boolean).join(", ");
-room = room.replace(importBlock[0], `const { ${named} } = THREE;`);
-room = room.replace(/export\s*\{\s*RoomEnvironment\s*\};?/, "window.RoomEnvironment = RoomEnvironment;");
-
-/* --------------------------------- scene.js: ES module -> classic script */
-let scene = read("js", "scene.js")
-  .replace(/import\s+\*\s+as\s+THREE\s+from\s+"three";/, "")
-  .replace(/import\s*\{\s*RoomEnvironment\s*\}\s*from\s*"three\/addons\/environments\/RoomEnvironment\.js";/, "")
-  .replace(/^/, "const RoomEnvironment = window.RoomEnvironment;\n");
+/* --------------------------------------------- hero portrait, as a data URI */
+const portraitB64 = fs.readFileSync(path.join(ROOT, "assets", "portrait.png")).toString("base64");
+const portraitDataURI = `data:image/png;base64,${portraitB64}`;
 
 /* ------------------------------------------- page body from index.html */
 const index = read("index.html");
@@ -48,6 +32,8 @@ let body = index.slice(index.indexOf("<body>") + 6, index.indexOf("</body>"));
 body = body.replace(/<script[^>]*src="[^"]*"[^>]*><\/script>/g, "");
 // no assets/ folder here, so the PDF buttons scroll rather than offer a download
 body = body.replace(/\sdownload(?=[\s>])/g, "");
+// inline the portrait so the single-file build carries no assets/ folder
+body = body.replace('src="assets/portrait.png"', `src="${portraitDataURI}"`);
 // the favicon lives in the head of the multi-file build; not needed here
 
 const out = `<title>Patrick Raymond Andreas</title>
@@ -55,14 +41,6 @@ const out = `<title>Patrick Raymond Andreas</title>
 ${css}
 </style>
 ${body}
-<script>
-${threeUMD}
-</script>
-<script>
-(function(){
-${room}
-})();
-</script>
 <script>
 ${read("js", "content.js")
   // the single-file build carries no assets/ folder, so the PDF buttons
@@ -74,9 +52,7 @@ ${read("js", "content.js")
 ${read("js", "main.js")}
 </script>
 <script>
-(function(){
-${scene}
-})();
+${read("js", "hero-photo.js")}
 </script>
 `;
 

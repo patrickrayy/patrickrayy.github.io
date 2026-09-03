@@ -487,7 +487,7 @@ body.menu-open .drawer { opacity: 1; transform: none; pointer-events: auto; }
 .btn--primary:hover { background: #e04e00; border-color: #e04e00; }
 .btn--ghost:hover { background: var(--ink); color: var(--bg); }
 
-/* 3D stage */
+/* hero portrait */
 .hero__stage {
   position: relative;
   min-height: clamp(320px, 52vh, 560px);
@@ -501,6 +501,12 @@ body.menu-open .drawer { opacity: 1; transform: none; pointer-events: auto; }
   inset: 0;
   width: 100%;
   height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  padding: clamp(10px, 2vw, 28px);
+  filter: grayscale(1) sepia(.4) saturate(2.8) hue-rotate(-14deg) contrast(1.12) brightness(.98);
+  transform-origin: 50% 88%;
+  will-change: transform;
 }
 .stage__hint {
   position: absolute;

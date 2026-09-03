@@ -489,8 +489,8 @@ const CONTENT = {
   /* ------------------------------------------------------------- CONTACT */
   contact: {
     lead: {
-      en: "I am applying to Apple Developer Academy Indonesia, and I am open to roles and collaborations in mobile and web development. The fastest way to reach me is email.",
-      id: "Saya sedang mendaftar ke Apple Developer Academy Indonesia, dan terbuka untuk peran serta kolaborasi di bidang pengembangan mobile dan web. Cara tercepat menghubungi saya adalah melalui email."
+      en: "Open to roles, freelance work, and collaborations in mobile and web development. The fastest way to reach me is email.",
+      id: "Terbuka untuk peran, pekerjaan lepas, dan kolaborasi di bidang pengembangan mobile dan web. Cara tercepat menghubungi saya adalah melalui email."
     }
   }
 };
